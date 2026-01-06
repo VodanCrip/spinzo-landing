@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Spinzo — дневник пути</title>
+  <title>Spinzo</title>
 
   <style>
     * {
@@ -16,45 +16,45 @@
     body {
       min-height: 100vh;
       background:
-        radial-gradient(circle at center, rgba(168,85,247,0.12), transparent 55%),
-        radial-gradient(circle at top, rgba(0,0,0,0.9), #000 70%),
-        #000;
+        radial-gradient(circle at 20% 15%, rgba(168,85,247,0.18), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(0,140,255,0.14), transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(255,200,0,0.08), transparent 45%),
+        #050508;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #fff;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* лёгкий шум */
+    body::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
     }
 
     .container {
       max-width: 420px;
       padding: 44px 22px;
+      position: relative;
+      z-index: 1;
     }
 
     .logo {
-      font-size: 60px;
+      font-size: 58px;
       font-weight: 800;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       color: #c084fc;
-      text-shadow:
-        0 0 18px rgba(192,132,252,0.6),
-        0 0 40px rgba(192,132,252,0.25);
-      animation: breathe 4s ease-in-out infinite;
-    }
-
-    @keyframes breathe {
-      0%, 100% {
-        transform: scale(1);
-        opacity: 0.85;
-      }
-      50% {
-        transform: scale(1.07);
-        opacity: 1;
-      }
+      text-shadow: 0 0 22px rgba(192,132,252,0.5);
     }
 
     h1 {
-      font-size: 27px;
+      font-size: 26px;
       line-height: 1.35;
       margin-bottom: 14px;
       font-weight: 700;
@@ -62,9 +62,9 @@
 
     .subtitle {
       font-size: 16px;
-      line-height: 1.6;
-      opacity: 0.9;
-      margin-bottom: 30px;
+      line-height: 1.55;
+      opacity: 0.85;
+      margin-bottom: 28px;
     }
 
     .btn {
@@ -78,7 +78,7 @@
       font-size: 17px;
       font-weight: 600;
       text-decoration: none;
-      margin-bottom: 15px;
+      margin-bottom: 14px;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -89,26 +89,20 @@
     .btn-telegram {
       background: linear-gradient(135deg, #00c6ff, #0072ff);
       color: #fff;
-      box-shadow: 0 10px 28px rgba(0,114,255,0.4);
+      box-shadow: 0 10px 26px rgba(0,114,255,0.4);
     }
 
     .btn-bonus {
       background: linear-gradient(135deg, #ffd200, #ffb700);
       color: #000;
-      box-shadow: 0 10px 28px rgba(255,183,0,0.4);
-    }
-
-    .trust {
-      font-size: 14px;
-      opacity: 0.75;
-      margin-top: 18px;
-      line-height: 1.5;
+      box-shadow: 0 10px 26px rgba(255,183,0,0.4);
     }
 
     .note {
-      font-size: 13px;
-      opacity: 0.55;
-      margin-top: 12px;
+      font-size: 14px;
+      opacity: 0.6;
+      margin-top: 18px;
+      line-height: 1.4;
     }
   </style>
 </head>
@@ -119,30 +113,26 @@
     <div class="logo">S</div>
 
     <h1>
-      Я иду к цели<br>
-      и честно показываю путь
+      Я иду к своей цели<br>
+      и показываю путь
     </h1>
 
     <div class="subtitle">
-      Пытаюсь накопить на машину для мамы.<br>
-      Делюсь тем, что получается — и тем, что нет.
+      Пробую разные решения.<br>
+      Что срабатывает — оставляю.<br>
+      Что нет — тоже показываю.
     </div>
 
     <a href="https://t.me/spinnnzo" class="btn btn-telegram">
-      📲 Смотреть путь в Telegram
+      📲 Смотреть в Telegram
     </a>
 
     <a href="https://one-vv02.life/?p=xobt" class="btn btn-bonus">
       🎁 Забрать бонус
     </a>
 
-    <div class="trust">
-      Без курсов, без обещаний,<br>
-      без «успешного успеха»
-    </div>
-
     <div class="note">
-      Личный дневник. Решения вы принимаете сами.
+      Без легенд и мотивационных речей.
     </div>
 
   </div>
