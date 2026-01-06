@@ -1,69 +1,128 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>Spinzo</title>
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #0a0a1a, #000);
-  color: #fff;
-  text-align: center;
-}
-.container {
-  max-width: 500px;
-  margin: auto;
-  padding: 60px 20px;
-}
-h1 {
-  font-size: 26px;
-  margin-bottom: 20px;
-}
-p {
-  font-size: 16px;
-  color: #ccc;
-}
-.btn {
-  display: block;
-  margin: 20px auto;
-  padding: 15px;
-  width: 100%;
-  max-width: 300px;
-  background: #00ff88;
-  color: #000;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-}
-.btn.secondary {
-  background: #ffcc00;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spinzo — мой путь</title>
+
+  <!-- Telegram icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e6ad59.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(ellipse at top, #2b0f3f 0%, #05010a 60%);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      background: rgba(10, 5, 20, 0.75);
+      border-radius: 20px;
+      padding: 32px 24px;
+      box-shadow: 0 0 40px rgba(155, 89, 255, 0.35);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: #c084fc;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #e5e5e5;
+      margin-bottom: 20px;
+    }
+
+    .sub {
+      font-size: 15px;
+      color: #bdbdbd;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 14px;
+      text-decoration: none;
+      margin-bottom: 14px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    .tg {
+      background: linear-gradient(135deg, #2aabee, #229ed9);
+      color: #fff;
+    }
+
+    .bonus {
+      background: linear-gradient(135deg, #facc15, #f59e0b);
+      color: #000;
+    }
+
+    .footer {
+      font-size: 13px;
+      color: #9ca3af;
+      margin-top: 18px;
+    }
+  </style>
 </head>
+
 <body>
-<div class="container">
-  <h1>Я веду свой путь и делюсь им —<br>пытаюсь накопить на машину для мамы</h1>
+  <div class="card">
+    <h1>Spinzo</h1>
 
-  <p>
-    Это личный дневник.<br>
-    Без обещаний и громких слов.
-  </p>
+    <p>
+      Я веду свой путь и делюсь им —<br>
+      пытаюсь накопить на машину для мамы
+    </p>
 
-  <a class="btn" href="https://t.me/spinnnzo">
-    👉 Смотреть путь в Telegram
-  </a>
+    <div class="sub">
+      Это личный дневник.<br>
+      Без обещаний и громких слов.
+    </div>
 
-  <p>
-    Я просто показываю, что делаю сам.<br>
-    Что получается — показываю.<br>
-    Что не получается — тоже.
-  </p>
+    <a class="btn tg" href="https://t.me/spinnnzo" target="_blank">
+      <i class="fab fa-telegram-plane"></i>
+      Смотреть путь в Telegram
+    </a>
 
-  <a class="btn secondary" href="redirect.html">
-    🎁 Забрать бонус
-  </a>
-</div>
+    <a class="btn bonus" href="redirect.html">
+      🎁 Забрать бонус
+    </a>
+
+    <div class="footer">
+      Я показываю, что делаю сам.<br>
+      Что получается — и что нет.
+    </div>
+  </div>
 </body>
 </html>
