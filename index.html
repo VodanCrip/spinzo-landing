@@ -16,8 +16,8 @@
     body {
       min-height: 100vh;
       background:
-        radial-gradient(circle at center, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.95) 45%, #000 100%),
-        linear-gradient(120deg, #1b2b0a, #2b0a3d, #061a3a);
+        radial-gradient(circle at center, rgba(10,10,15,0.88) 0%, rgba(5,5,8,0.95) 45%, #000 100%),
+        linear-gradient(120deg, #1a2a0f, #2a0f3d, #0a1a33);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -27,28 +27,41 @@
 
     .container {
       max-width: 420px;
-      padding: 40px 20px;
+      padding: 42px 22px;
     }
 
     .logo {
-      font-size: 56px;
+      font-size: 58px;
       font-weight: 800;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       color: #c084fc;
-      text-shadow: 0 0 20px rgba(192,132,252,0.6);
+      text-shadow: 0 0 22px rgba(192,132,252,0.55);
+      animation: breathe 4s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.85;
+      }
+      50% {
+        transform: scale(1.06);
+        opacity: 1;
+      }
     }
 
     h1 {
-      font-size: 26px;
+      font-size: 27px;
       line-height: 1.35;
       margin-bottom: 14px;
+      font-weight: 700;
     }
 
-    p {
+    .subtitle {
       font-size: 16px;
       line-height: 1.6;
       opacity: 0.9;
-      margin-bottom: 26px;
+      margin-bottom: 30px;
     }
 
     .btn {
@@ -57,41 +70,43 @@
       justify-content: center;
       gap: 10px;
       width: 100%;
-      padding: 16px;
-      border-radius: 14px;
+      padding: 17px;
+      border-radius: 15px;
       font-size: 17px;
       font-weight: 600;
       text-decoration: none;
-      margin-bottom: 14px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin-bottom: 15px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
     }
 
     .btn:hover {
       transform: translateY(-2px);
+      opacity: 0.95;
     }
 
     .btn-telegram {
       background: linear-gradient(135deg, #00c6ff, #0072ff);
       color: #fff;
-      box-shadow: 0 10px 30px rgba(0,114,255,0.35);
+      box-shadow: 0 10px 26px rgba(0,114,255,0.35);
     }
 
     .btn-bonus {
       background: linear-gradient(135deg, #ffd200, #ffb700);
       color: #000;
-      box-shadow: 0 10px 30px rgba(255,183,0,0.35);
+      box-shadow: 0 10px 26px rgba(255,183,0,0.35);
+    }
+
+    .trust {
+      font-size: 14px;
+      opacity: 0.75;
+      margin-top: 18px;
+      line-height: 1.5;
     }
 
     .note {
       font-size: 13px;
-      opacity: 0.65;
-      margin-top: 18px;
-    }
-
-    .social {
-      font-size: 14px;
-      opacity: 0.75;
-      margin-top: 10px;
+      opacity: 0.55;
+      margin-top: 12px;
     }
   </style>
 </head>
@@ -103,13 +118,13 @@
 
     <h1>
       Я иду к цели<br>
-      и показываю путь без прикрас
+      и честно показываю путь
     </h1>
 
-    <p>
+    <div class="subtitle">
       Пытаюсь накопить на машину для мамы.<br>
-      Это личный дневник — без обещаний.
-    </p>
+      Делюсь тем, что получается — и тем, что нет.
+    </div>
 
     <a href="https://t.me/spinnnzo" class="btn btn-telegram">
       📲 Смотреть путь в Telegram
@@ -119,21 +134,15 @@
       🎁 Забрать бонус
     </a>
 
-    <div class="social">
-      В канале уже идут обновления и результаты
+    <div class="trust">
+      Без курсов, без обещаний,<br>
+      без «успешного успеха»
     </div>
 
     <div class="note">
-      Я не продаю курсы и не обещаю заработок
+      Личный дневник. Решения вы принимаете сами.
     </div>
 
   </div>
-
-  <script>
-    setTimeout(() => {
-      window.location.href = "https://t.me/spinnnzo";
-    }, 8000);
-  </script>
-
 </body>
 </html>
