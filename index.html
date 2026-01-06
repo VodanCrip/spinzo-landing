@@ -2,34 +2,57 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Spinzo — путь к цели</title>
+  <title>Spinzo — дневник пути</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Telegram icon -->
+  <!-- Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
-      background: radial-gradient(circle at top, #1b0b2e, #05010a 70%);
-      color: #ffffff;
       min-height: 100vh;
+      background:
+        radial-gradient(60% 40% at 50% 0%, rgba(177,0,255,.25), transparent 60%),
+        radial-gradient(40% 30% at 10% 20%, rgba(138,255,0,.18), transparent 60%),
+        radial-gradient(30% 20% at 90% 30%, rgba(0,114,255,.18), transparent 60%),
+        #05010a;
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 20px;
+      overflow: hidden;
+    }
+
+    /* Background brand */
+    .bg-brand {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .bg-brand span {
+      font-size: min(70vw, 420px);
+      font-weight: 900;
+      color: rgba(255,255,255,0.06);
+      filter: blur(8px);
+      text-shadow:
+        0 0 80px rgba(177,0,255,.35),
+        0 0 120px rgba(138,255,0,.25);
+      user-select: none;
     }
 
     .container {
       width: 100%;
       max-width: 420px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     .logo {
@@ -38,21 +61,23 @@
       background: linear-gradient(135deg, #8aff00, #b100ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
+      text-shadow: 0 0 25px rgba(177,0,255,.35);
     }
 
     h1 {
-      font-size: 22px;
-      font-weight: 700;
-      line-height: 1.35;
-      margin-bottom: 14px;
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 10px;
+      letter-spacing: .2px;
     }
 
     .subtitle {
       font-size: 15px;
-      opacity: 0.85;
+      opacity: .9;
       line-height: 1.5;
-      margin-bottom: 28px;
+      margin-bottom: 26px;
     }
 
     .btn {
@@ -61,60 +86,58 @@
       justify-content: center;
       gap: 10px;
       width: 100%;
-      padding: 16px;
-      border-radius: 14px;
+      padding: 17px 16px;
+      border-radius: 16px;
       font-size: 16px;
-      font-weight: 700;
+      font-weight: 800;
       text-decoration: none;
       margin-bottom: 14px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+      will-change: transform;
     }
-
-    .btn:active {
-      transform: scale(0.97);
-    }
+    .btn:active { transform: scale(.97); }
 
     .tg {
       background: linear-gradient(135deg, #00c6ff, #0072ff);
       color: #fff;
+      box-shadow: 0 0 26px rgba(0,114,255,.45);
       animation: softBounce 3s infinite;
-      box-shadow: 0 0 25px rgba(0, 114, 255, 0.45);
     }
+    .tg:hover { filter: brightness(1.05); box-shadow: 0 0 34px rgba(0,114,255,.6); }
 
     .bonus {
       background: linear-gradient(135deg, #ffd400, #ff9f00);
       color: #000;
+      box-shadow: 0 0 32px rgba(255,180,0,.55);
       animation: softBounce 2.2s infinite;
-      box-shadow: 0 0 30px rgba(255, 180, 0, 0.55);
     }
+    .bonus:hover { filter: brightness(1.05); box-shadow: 0 0 40px rgba(255,180,0,.7); }
 
     .note {
       font-size: 13px;
-      opacity: 0.6;
-      margin-top: 16px;
-      line-height: 1.4;
+      opacity: .65;
+      margin-top: 14px;
+      line-height: 1.45;
     }
 
     @keyframes softBounce {
-      0%, 100% { transform: translateY(0); }
+      0%,100% { transform: translateY(0); }
       50% { transform: translateY(-6px); }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
+  <div class="bg-brand"><span>S</span></div>
 
+  <div class="container">
     <div class="logo">S</div>
 
-    <h1>
-      Я веду свой путь и делюсь им —
-      <br>пытаюсь накопить на машину для мамы
-    </h1>
+    <h1>Я веду путь к цели<br>и показываю всё честно</h1>
 
     <div class="subtitle">
-      Это личный дневник.<br>
-      Без обещаний и громких слов.
+      Пытаюсь накопить на машину для мамы.<br>
+      Это личный дневник — без обещаний.
     </div>
 
     <a href="https://t.me/spinnnzo" class="btn tg">
@@ -127,10 +150,8 @@
     </a>
 
     <div class="note">
-      Я ничего не продаю.<br>
-      Просто показываю, что делаю сам.
+      Я не продаю курсы и не обещаю заработок.
     </div>
-
   </div>
 
 </body>
