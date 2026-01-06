@@ -1,60 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Spinzo — мой путь</title>
+  <meta charset="UTF-8">
+  <title>Spinzo — путь к цели</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Telegram icon -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2e0e6ad59.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Inter', sans-serif;
     }
 
     body {
-      min-height: 100vh;
-      background: radial-gradient(ellipse at top, #2b0f3f 0%, #05010a 60%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: radial-gradient(circle at top, #1b0b2e, #05010a 70%);
       color: #ffffff;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 20px;
     }
 
-    .card {
-      max-width: 420px;
+    .container {
       width: 100%;
+      max-width: 420px;
       text-align: center;
-      background: rgba(10, 5, 20, 0.75);
-      border-radius: 20px;
-      padding: 32px 24px;
-      box-shadow: 0 0 40px rgba(155, 89, 255, 0.35);
-      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-size: 56px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #8aff00, #b100ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 18px;
     }
 
     h1 {
-      font-size: 32px;
-      font-weight: 800;
-      margin-bottom: 16px;
-      color: #c084fc;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 14px;
     }
 
-    p {
-      font-size: 18px;
-      line-height: 1.5;
-      color: #e5e5e5;
-      margin-bottom: 20px;
-    }
-
-    .sub {
+    .subtitle {
       font-size: 15px;
-      color: #bdbdbd;
+      opacity: 0.85;
+      line-height: 1.5;
       margin-bottom: 28px;
     }
 
@@ -65,64 +62,76 @@
       gap: 10px;
       width: 100%;
       padding: 16px;
-      font-size: 18px;
-      font-weight: 600;
       border-radius: 14px;
+      font-size: 16px;
+      font-weight: 700;
       text-decoration: none;
       margin-bottom: 14px;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    .btn:active {
+      transform: scale(0.97);
     }
 
     .tg {
-      background: linear-gradient(135deg, #2aabee, #229ed9);
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
       color: #fff;
+      animation: softBounce 3s infinite;
+      box-shadow: 0 0 25px rgba(0, 114, 255, 0.45);
     }
 
     .bonus {
-      background: linear-gradient(135deg, #facc15, #f59e0b);
+      background: linear-gradient(135deg, #ffd400, #ff9f00);
       color: #000;
+      animation: softBounce 2.2s infinite;
+      box-shadow: 0 0 30px rgba(255, 180, 0, 0.55);
     }
 
-    .footer {
+    .note {
       font-size: 13px;
-      color: #9ca3af;
-      margin-top: 18px;
+      opacity: 0.6;
+      margin-top: 16px;
+      line-height: 1.4;
+    }
+
+    @keyframes softBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
     }
   </style>
 </head>
-
 <body>
-  <div class="card">
-    <h1>Spinzo</h1>
 
-    <p>
-      Я веду свой путь и делюсь им —<br>
-      пытаюсь накопить на машину для мамы
-    </p>
+  <div class="container">
 
-    <div class="sub">
+    <div class="logo">S</div>
+
+    <h1>
+      Я веду свой путь и делюсь им —
+      <br>пытаюсь накопить на машину для мамы
+    </h1>
+
+    <div class="subtitle">
       Это личный дневник.<br>
       Без обещаний и громких слов.
     </div>
 
-    <a class="btn tg" href="https://t.me/spinnnzo" target="_blank">
-      <i class="fab fa-telegram-plane"></i>
+    <a href="https://t.me/spinnnzo" class="btn tg">
+      <i class="fa-brands fa-telegram"></i>
       Смотреть путь в Telegram
     </a>
 
-    <a class="btn bonus" href="redirect.html">
+    <a href="redirect.html" class="btn bonus">
       🎁 Забрать бонус
     </a>
 
-    <div class="footer">
-      Я показываю, что делаю сам.<br>
-      Что получается — и что нет.
+    <div class="note">
+      Я ничего не продаю.<br>
+      Просто показываю, что делаю сам.
     </div>
+
   </div>
+
 </body>
 </html>
