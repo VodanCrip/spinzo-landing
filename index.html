@@ -1,221 +1,195 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spinzo — личный маршрут</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Spinzo — путь</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Manrope', sans-serif;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      background:
-        radial-gradient(600px at 10% 10%, rgba(192,132,252,0.15), transparent 40%),
-        radial-gradient(600px at 90% 90%, rgba(0,198,255,0.12), transparent 40%),
-        linear-gradient(120deg, #050508, #070b18, #050508);
-      background-size: 200% 200%;
-      animation: bgMove 22s ease infinite;
-      color: #fff;
-      padding: 24px;
-    }
+body {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 600px at 10% 10%, rgba(0,255,150,0.15), transparent 60%),
+    radial-gradient(800px 500px at 90% 20%, rgba(120,0,255,0.18), transparent 60%),
+    linear-gradient(180deg, #05060a, #090b14);
+}
 
-    @keyframes bgMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
 
-    .container {
-      max-width: 420px;
-      margin: 0 auto;
-    }
+.card {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  animation: fadeUp 1s ease forwards;
+}
 
-    .card {
-      background: rgba(255,255,255,0.06);
-      backdrop-filter: blur(18px);
-      border-radius: 28px;
-      padding: 36px 26px;
-      margin-bottom: 28px;
-      box-shadow:
-        0 20px 50px rgba(0,0,0,0.45),
-        inset 0 0 0 1px rgba(255,255,255,0.08);
-      text-align: center;
-    }
+.logo {
+  font-size: 48px;
+  font-weight: 800;
+  color: #b07cff;
+  margin-bottom: 16px;
+}
 
-    .logo {
-      font-size: 56px;
-      font-weight: 800;
-      color: #c084fc;
-      text-shadow: 0 0 26px rgba(192,132,252,0.6);
-      margin-bottom: 16px;
-    }
+h1 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
 
-    h1 {
-      font-size: 26px;
-      font-weight: 800;
-      line-height: 1.25;
-      margin-bottom: 14px;
-    }
+.subtitle {
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
 
-    .text {
-      font-size: 16px;
-      line-height: 1.6;
-      opacity: 0.85;
-      margin-bottom: 26px;
-    }
+/* info blocks */
 
-    .btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      width: 100%;
-      padding: 17px;
-      border-radius: 18px;
-      font-size: 16px;
-      font-weight: 700;
-      text-decoration: none;
-      margin-bottom: 14px;
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
+.info {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 18px;
+  text-align: left;
+}
 
-    .btn:active {
-      transform: scale(0.97);
-    }
+.info h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
 
-    .btn-tg {
-      background: linear-gradient(135deg, #00c6ff, #0072ff);
-      color: #fff;
-      box-shadow: 0 14px 34px rgba(0,114,255,0.45);
-    }
+.info p, .info ul {
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
+}
 
-    .btn-bonus {
-      background: linear-gradient(135deg, #ffd200, #ffb700);
-      color: #000;
-      box-shadow: 0 14px 34px rgba(255,183,0,0.45);
-    }
+.info ul {
+  list-style: none;
+  padding-left: 0;
+}
 
-    .goal img {
-      width: 100%;
-      border-radius: 20px;
-      margin-bottom: 14px;
-    }
+.info ul li {
+  margin-bottom: 6px;
+}
 
-    .goal-title {
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
+/* buttons */
 
-    .goal-text {
-      font-size: 15px;
-      opacity: 0.7;
-    }
+.buttons {
+  margin-top: 24px;
+}
 
-    .faq {
-      text-align: left;
-    }
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+  margin-bottom: 14px;
+}
 
-    .faq-item {
-      margin-bottom: 18px;
-    }
+.btn:hover {
+  transform: translateY(-2px);
+}
 
-    .faq-q {
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
+.telegram {
+  background: linear-gradient(135deg, #00b3ff, #006bff);
+  color: #fff;
+  box-shadow: 0 8px 30px rgba(0,120,255,0.35);
+}
 
-    .faq-a {
-      font-size: 15px;
-      opacity: 0.75;
-      line-height: 1.5;
-    }
+.bonus {
+  background: linear-gradient(135deg, #ffd500, #ffae00);
+  color: #000;
+  box-shadow: 0 8px 30px rgba(255,190,0,0.35);
+}
 
-    .note {
-      text-align: center;
-      font-size: 14px;
-      opacity: 0.5;
-      margin-top: 16px;
-    }
-  </style>
+.footer {
+  margin-top: 14px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+}
+
+/* animation */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
 </head>
 
 <body>
-
-<div class="container">
-
-  <!-- HERO -->
+<div class="wrapper">
   <div class="card">
+
     <div class="logo">S</div>
 
-    <h1>
-      Я иду к своей цели<br>
-      и показываю процесс
-    </h1>
+    <h1>Я иду к своей цели<br>и показываю путь</h1>
 
-    <div class="text">
-      Без мотивационных речей.<br>
-      Просто путь — как есть.
+    <div class="subtitle">
+      Пробую разные решения.<br>
+      Что работает — оставляю.<br>
+      Что нет — тоже показываю.
     </div>
 
-    <a href="https://t.me/spinnnzo" class="btn btn-tg">
-      📲 Смотреть в Telegram
-    </a>
+    <div class="info">
+      <h3>Что это за страница</h3>
+      <p>
+        Это точка входа. Здесь собран мой путь, мысли и решения — без легенд и мотивационных сказок.
+      </p>
+    </div>
 
-    <a href="https://lknt.pro/6da1fa" class="btn btn-bonus">
-      🎁 Забрать бонус
-    </a>
+    <div class="info">
+      <h3>Что в Telegram</h3>
+      <ul>
+        <li>— реальные шаги и наблюдения</li>
+        <li>— что пробую и почему</li>
+        <li>— что сработало, а что нет</li>
+        <li>— без курсов и обещаний заработка</li>
+      </ul>
+    </div>
+
+    <div class="buttons">
+      <a href="https://t.me/spinnnzo" class="btn telegram">📲 Смотреть в Telegram</a>
+      <a href="https://lknt.pro/6da1fa" class="btn bonus">🎁 Забрать бонус</a>
+    </div>
+
+    <div class="footer">
+      Без легенд. Без мотивационных речей.
+    </div>
+
   </div>
-
-  <!-- GOAL -->
-  <div class="card goal">
-    <img src="goal.jpg" alt="Моя цель">
-
-    <div class="goal-title">
-      Моя цель
-    </div>
-
-    <div class="goal-text">
-      Машина для мамы.<br>
-      Я иду к этому публично.
-    </div>
-  </div>
-
-  <!-- FAQ -->
-  <div class="card faq">
-    <div class="faq-item">
-      <div class="faq-q">Что это за страница?</div>
-      <div class="faq-a">
-        Точка входа в мой личный путь. Без обучения и инфоцыганства.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Зачем мне это смотреть?</div>
-      <div class="faq-a">
-        Если интересно наблюдать за реальным процессом, а не результатом.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Что по деньгам?</div>
-      <div class="faq-a">
-        Я ничего не продаю. Бонус — это отдельная возможность, не обязательство.
-      </div>
-    </div>
-
-    <div class="note">
-      Можно просто закрыть страницу — это нормально.
-    </div>
-  </div>
-
 </div>
-
 </body>
 </html>
