@@ -18,11 +18,33 @@ body {
   font-family: 'Inter', sans-serif;
   color: #fff;
   min-height: 100vh;
-  background:
-    radial-gradient(1200px 600px at 10% 10%, rgba(0,255,150,0.15), transparent 60%),
-    radial-gradient(800px 500px at 90% 20%, rgba(120,0,255,0.18), transparent 60%),
-    linear-gradient(180deg, #05060a, #090b14);
+  background: #05060a;
+  overflow-x: hidden;
 }
+
+/* фон с целью */
+
+.background {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(5,6,10,0.85), rgba(5,6,10,0.95)),
+    url("goal.jpg") center/cover no-repeat;
+  filter: blur(6px);
+  transform: scale(1.1);
+  z-index: -2;
+}
+
+.neon {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(900px 500px at 10% 10%, rgba(0,255,150,0.18), transparent 60%),
+    radial-gradient(700px 500px at 90% 20%, rgba(120,0,255,0.22), transparent 60%);
+  z-index: -1;
+}
+
+/* layout */
 
 .wrapper {
   min-height: 100vh;
@@ -54,7 +76,7 @@ h1 {
 
 .subtitle {
   font-size: 15px;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.8);
   line-height: 1.5;
   margin-bottom: 28px;
 }
@@ -62,8 +84,9 @@ h1 {
 /* info blocks */
 
 .info {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(6px);
   border-radius: 16px;
   padding: 18px;
   margin-bottom: 18px;
@@ -78,13 +101,12 @@ h1 {
 
 .info p, .info ul {
   font-size: 14px;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.85);
   line-height: 1.5;
 }
 
 .info ul {
   list-style: none;
-  padding-left: 0;
 }
 
 .info ul li {
@@ -119,19 +141,19 @@ h1 {
 .telegram {
   background: linear-gradient(135deg, #00b3ff, #006bff);
   color: #fff;
-  box-shadow: 0 8px 30px rgba(0,120,255,0.35);
+  box-shadow: 0 10px 35px rgba(0,120,255,0.4);
 }
 
 .bonus {
   background: linear-gradient(135deg, #ffd500, #ffae00);
   color: #000;
-  box-shadow: 0 8px 30px rgba(255,190,0,0.35);
+  box-shadow: 0 10px 35px rgba(255,190,0,0.4);
 }
 
 .footer {
   margin-top: 14px;
   font-size: 12px;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.5);
 }
 
 /* animation */
@@ -150,6 +172,10 @@ h1 {
 </head>
 
 <body>
+
+<div class="background"></div>
+<div class="neon"></div>
+
 <div class="wrapper">
   <div class="card">
 
@@ -186,10 +212,11 @@ h1 {
     </div>
 
     <div class="footer">
-      Без легенд. Без мотивационных речей.
+      Цель есть. Путь — в процессе.
     </div>
 
   </div>
 </div>
+
 </body>
 </html>
