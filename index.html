@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Spinzo — личный путь</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spinzo — путь в процессе</title>
 
-  <!-- Шрифт -->
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -17,91 +16,78 @@
     }
 
     body {
-      min-height: 100vh;
-      background: linear-gradient(120deg, #050508, #0a0f1f, #050508);
-      background-size: 300% 300%;
-      animation: bgMove 18s ease infinite;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: linear-gradient(120deg, #040409, #0b1022, #040409);
+      background-size: 400% 400%;
+      animation: bgFlow 20s ease infinite;
       color: #fff;
-      overflow: hidden;
     }
 
-    @keyframes bgMove {
+    @keyframes bgFlow {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
+    .section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 22px;
+      text-align: center;
+    }
+
     .container {
       max-width: 420px;
-      padding: 48px 22px;
-      text-align: center;
       animation: fadeUp 1.2s ease forwards;
     }
 
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .logo {
       font-size: 64px;
       font-weight: 800;
-      margin-bottom: 22px;
       color: #c084fc;
-      text-shadow: 0 0 30px rgba(192,132,252,0.6);
-    }
-
-    .label {
-      font-size: 13px;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      opacity: 0.55;
-      margin-bottom: 10px;
+      text-shadow: 0 0 28px rgba(192,132,252,0.6);
+      margin-bottom: 24px;
     }
 
     h1 {
       font-size: 28px;
-      line-height: 1.25;
       font-weight: 800;
+      line-height: 1.25;
       margin-bottom: 16px;
     }
 
-    .subtitle {
+    .text {
       font-size: 16px;
       line-height: 1.6;
       opacity: 0.85;
-      margin-bottom: 34px;
+      margin-bottom: 32px;
     }
 
     .btn {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       gap: 10px;
-      width: 100%;
       padding: 18px;
       border-radius: 18px;
       font-size: 17px;
       font-weight: 700;
       text-decoration: none;
       margin-bottom: 14px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      transition: transform .25s ease, box-shadow .25s ease;
     }
 
     .btn:hover {
       transform: translateY(-3px);
     }
 
-    .btn-telegram {
+    .btn-tg {
       background: linear-gradient(135deg, #00c6ff, #0072ff);
       color: #fff;
       box-shadow: 0 12px 30px rgba(0,114,255,0.45);
@@ -115,50 +101,94 @@
     }
 
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 rgba(255,183,0,0.0); }
-      50% { box-shadow: 0 0 26px rgba(255,183,0,0.45); }
-      100% { box-shadow: 0 0 0 rgba(255,183,0,0.0); }
+      0% { box-shadow: 0 0 0 rgba(255,183,0,0); }
+      50% { box-shadow: 0 0 26px rgba(255,183,0,.45); }
+      100% { box-shadow: 0 0 0 rgba(255,183,0,0); }
     }
 
-    .note {
+    .hint {
       font-size: 14px;
       opacity: 0.55;
-      margin-top: 20px;
+      margin-top: 18px;
       line-height: 1.5;
+    }
+
+    .divider {
+      height: 1px;
+      width: 60px;
+      background: rgba(255,255,255,0.15);
+      margin: 24px auto;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
 
-    <div class="logo">S</div>
+  <!-- ЭКРАН 1 -->
+  <section class="section">
+    <div class="container">
+      <div class="logo">S</div>
 
-    <div class="label">личный маршрут</div>
+      <h1>
+        Я иду к своей цели<br>
+        и показываю процесс
+      </h1>
 
-    <h1>
-      Я иду к своей цели<br>
-      и фиксирую путь
-    </h1>
+      <div class="text">
+        Не результат.<br>
+        А то, что происходит между «начал» и «получилось».
+      </div>
 
-    <div class="subtitle">
-      Пробую, ошибаюсь, пересобираюсь.<br>
-      Показываю процесс без прикрас.
+      <a href="https://t.me/spinnnzo" class="btn btn-tg">
+        📲 Смотреть в Telegram
+      </a>
+
+      <a href="https://lknt.pro/6da1fa" class="btn btn-bonus">
+        🎁 Забрать бонус
+      </a>
+
+      <div class="hint">
+        Можно просто наблюдать.
+      </div>
     </div>
+  </section>
 
-    <a href="https://t.me/spinnnzo" class="btn btn-telegram">
-      📲 Смотреть путь в Telegram
-    </a>
+  <!-- ЭКРАН 2 -->
+  <section class="section">
+    <div class="container">
+      <h1>Зачем за этим следят</h1>
 
-    <a href="https://one-vv02.life/?p=xobt" class="btn btn-bonus">
-      🎁 Забрать бонус
-    </a>
+      <div class="divider"></div>
 
-    <div class="note">
-      Не мотивация. Не обучение.<br>
-      Просто живой процесс.
+      <div class="text">
+        • чтобы подсмотреть рабочие решения<br>
+        • чтобы увидеть ошибки вживую<br>
+        • чтобы не вариться в своём пузыре<br><br>
+        Здесь не учат.<br>
+        Здесь показывают.
+      </div>
     </div>
+  </section>
 
-  </div>
+  <!-- ЭКРАН 3 -->
+  <section class="section">
+    <div class="container">
+      <h1>Если откликается</h1>
+
+      <div class="text">
+        Ты можешь пойти дальше.<br>
+        Или просто закрыть страницу — это ок.
+      </div>
+
+      <a href="https://t.me/spinnnzo" class="btn btn-tg">
+        🚀 Перейти в Telegram
+      </a>
+
+      <div class="hint">
+        Без обязательств.
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
