@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Путь к цели</title>
+  <title>Spinzo — путь к цели</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -24,7 +23,6 @@
         linear-gradient(180deg, #07070c, #0b0b14);
       color: #ffffff;
       display: flex;
-      align-items: center;
       justify-content: center;
       padding: 24px;
     }
@@ -39,29 +37,29 @@
       font-size: 42px;
       font-weight: 700;
       color: #b88cff;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     h1 {
       font-size: 28px;
       font-weight: 700;
       line-height: 1.25;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .subtitle {
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.5;
       color: rgba(255,255,255,0.85);
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
 
     .card {
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 18px;
-      padding: 20px;
-      margin-bottom: 28px;
+      padding: 18px;
+      margin-bottom: 26px;
       backdrop-filter: blur(12px);
     }
 
@@ -75,10 +73,10 @@
       display: flex;
       flex-direction: column;
       gap: 14px;
+      margin-bottom: 26px;
     }
 
     .btn {
-      display: block;
       padding: 16px;
       border-radius: 14px;
       font-size: 16px;
@@ -103,10 +101,28 @@
       box-shadow: 0 10px 30px rgba(255,200,0,0.35);
     }
 
+    /* Блок цели */
+    .goal {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .goal img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      margin-bottom: 10px;
+    }
+
+    .goal-caption {
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+    }
+
     .footer {
       margin-top: 18px;
       font-size: 12px;
-      color: rgba(255,255,255,0.55);
+      color: rgba(255,255,255,0.5);
     }
   </style>
 </head>
@@ -122,15 +138,14 @@
     </h1>
 
     <div class="subtitle">
-      Это не витрина успеха.<br>
-      Это реальный путь — шаг за шагом.
+      Личный путь. Реальные решения.<br>
+      Без легенд и мотивационных сказок.
     </div>
 
     <div class="card">
       <p>
-        Я пробую разные решения, проверяю идеи на практике и честно делюсь выводами.<br><br>
-        Что сработало — оставляю.<br>
-        Что нет — тоже показываю.
+        Здесь я собираю свой путь: что пробую, что работает и какие выводы делаю.
+        Всё остальное — в Telegram.
       </p>
     </div>
 
@@ -143,8 +158,16 @@
       </a>
     </div>
 
+    <!-- ЦЕЛЬ -->
+    <div class="goal">
+      <img src="goal.jpg" alt="Моя цель — машина для мамы">
+      <div class="goal-caption">
+        Цель есть. Путь — в процессе.
+      </div>
+    </div>
+
     <div class="footer">
-      Без курсов. Без обещаний. Только путь.
+      Spinzo — личный путь без обещаний.
     </div>
 
   </div>
