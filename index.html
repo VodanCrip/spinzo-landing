@@ -1,222 +1,153 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Spinzo — путь</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Путь к цели</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body {
-  font-family: 'Inter', sans-serif;
-  color: #fff;
-  min-height: 100vh;
-  background: #05060a;
-  overflow-x: hidden;
-}
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(180,120,255,0.25), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(0,160,255,0.25), transparent 45%),
+        linear-gradient(180deg, #07070c, #0b0b14);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
 
-/* фон с целью */
+    .container {
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
 
-.background {
-  position: fixed;
-  inset: 0;
-  background:
-    linear-gradient(180deg, rgba(5,6,10,0.85), rgba(5,6,10,0.95)),
-    url("goal.jpg") center/cover no-repeat;
-  filter: blur(6px);
-  transform: scale(1.1);
-  z-index: -2;
-}
+    .logo {
+      font-size: 42px;
+      font-weight: 700;
+      color: #b88cff;
+      margin-bottom: 20px;
+    }
 
-.neon {
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(900px 500px at 10% 10%, rgba(0,255,150,0.18), transparent 60%),
-    radial-gradient(700px 500px at 90% 20%, rgba(120,0,255,0.22), transparent 60%);
-  z-index: -1;
-}
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
 
-/* layout */
+    .subtitle {
+      font-size: 16px;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 24px;
+    }
 
-.wrapper {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-}
+    .card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 28px;
+      backdrop-filter: blur(12px);
+    }
 
-.card {
-  width: 100%;
-  max-width: 420px;
-  text-align: center;
-  animation: fadeUp 1s ease forwards;
-}
+    .card p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.85);
+    }
 
-.logo {
-  font-size: 48px;
-  font-weight: 800;
-  color: #b07cff;
-  margin-bottom: 16px;
-}
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
 
-h1 {
-  font-size: 26px;
-  font-weight: 800;
-  margin-bottom: 14px;
-}
+    .btn {
+      display: block;
+      padding: 16px;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-.subtitle {
-  font-size: 15px;
-  color: rgba(255,255,255,0.8);
-  line-height: 1.5;
-  margin-bottom: 28px;
-}
+    .btn:hover {
+      transform: translateY(-2px);
+    }
 
-/* info blocks */
+    .telegram {
+      background: linear-gradient(135deg, #1da1ff, #0077ff);
+      color: #fff;
+      box-shadow: 0 10px 30px rgba(0,120,255,0.35);
+    }
 
-.info {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  backdrop-filter: blur(6px);
-  border-radius: 16px;
-  padding: 18px;
-  margin-bottom: 18px;
-  text-align: left;
-}
+    .bonus {
+      background: linear-gradient(135deg, #ffd43b, #ffb700);
+      color: #000;
+      box-shadow: 0 10px 30px rgba(255,200,0,0.35);
+    }
 
-.info h3 {
-  font-size: 15px;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.info p, .info ul {
-  font-size: 14px;
-  color: rgba(255,255,255,0.85);
-  line-height: 1.5;
-}
-
-.info ul {
-  list-style: none;
-}
-
-.info ul li {
-  margin-bottom: 6px;
-}
-
-/* buttons */
-
-.buttons {
-  margin-top: 24px;
-}
-
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 15px;
-  border-radius: 14px;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform .2s ease, box-shadow .2s ease;
-  margin-bottom: 14px;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.telegram {
-  background: linear-gradient(135deg, #00b3ff, #006bff);
-  color: #fff;
-  box-shadow: 0 10px 35px rgba(0,120,255,0.4);
-}
-
-.bonus {
-  background: linear-gradient(135deg, #ffd500, #ffae00);
-  color: #000;
-  box-shadow: 0 10px 35px rgba(255,190,0,0.4);
-}
-
-.footer {
-  margin-top: 14px;
-  font-size: 12px;
-  color: rgba(255,255,255,0.5);
-}
-
-/* animation */
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>
+    .footer {
+      margin-top: 18px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="background"></div>
-<div class="neon"></div>
-
-<div class="wrapper">
-  <div class="card">
+  <div class="container">
 
     <div class="logo">S</div>
 
-    <h1>Я иду к своей цели<br>и показываю путь</h1>
+    <h1>
+      Я иду к своей цели<br>
+      и показываю путь
+    </h1>
 
     <div class="subtitle">
-      Пробую разные решения.<br>
-      Что работает — оставляю.<br>
-      Что нет — тоже показываю.
+      Это не витрина успеха.<br>
+      Это реальный путь — шаг за шагом.
     </div>
 
-    <div class="info">
-      <h3>Что это за страница</h3>
+    <div class="card">
       <p>
-        Это точка входа. Здесь собран мой путь, мысли и решения — без легенд и мотивационных сказок.
+        Я пробую разные решения, проверяю идеи на практике и честно делюсь выводами.<br><br>
+        Что сработало — оставляю.<br>
+        Что нет — тоже показываю.
       </p>
     </div>
 
-    <div class="info">
-      <h3>Что в Telegram</h3>
-      <ul>
-        <li>— реальные шаги и наблюдения</li>
-        <li>— что пробую и почему</li>
-        <li>— что сработало, а что нет</li>
-        <li>— без курсов и обещаний заработка</li>
-      </ul>
-    </div>
-
     <div class="buttons">
-      <a href="https://t.me/spinnnzo" class="btn telegram">📲 Смотреть в Telegram</a>
-      <a href="https://lknt.pro/6da1fa" class="btn bonus">🎁 Забрать бонус</a>
+      <a href="https://t.me/spinnnzo" class="btn telegram">
+        ✈️ Смотреть в Telegram
+      </a>
+      <a href="https://lknt.pro/6da1fa" class="btn bonus">
+        🎁 Забрать бонус
+      </a>
     </div>
 
     <div class="footer">
-      Цель есть. Путь — в процессе.
+      Без курсов. Без обещаний. Только путь.
     </div>
 
   </div>
-</div>
 
 </body>
 </html>
